@@ -63,11 +63,6 @@ Run the verifier for all cases:
 python verifier_agent.py --all
 ```
 
-## Troubleshooting
-
-- Phoenix DB locks on Windows: avoid auto-launching the Phoenix UI during automated runs. Start the UI manually if needed and shut it down before exiting the Python run.
-- Git authentication: use `gh auth login` or upload an SSH public key to your GitHub account (see `REPRODUCTION.md` for details).
-
 ## Contributing
 
 If you want to improve the project, open an issue or submit a PR. Keep changes focused on reproducibility and minimal external services.
