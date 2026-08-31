@@ -1,0 +1,6 @@
+{
+  "name": "GET /v1/analytics (Nested Shadow Field)",
+  "drift": true,
+  "type": "NESTED_SHADOW_FIELD",
+  "field": "dimension_id"
+}

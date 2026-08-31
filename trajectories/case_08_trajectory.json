@@ -1,0 +1,85 @@
+{
+  "case_id": "case_08",
+  "runtime_seconds": 8.66,
+  "total_steps": 4,
+  "steps": [
+    {
+      "timestamp": 6.194,
+      "step_type": "INITIALIZE",
+      "details": {
+        "case_id": "case_08",
+        "spec": {
+          "paths": {
+            "/v1/analytics": {
+              "get": {
+                "responses": {
+                  "200": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "properties": {
+                            "data": {
+                              "properties": {
+                                "dim": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "timestamp": 6.194,
+      "step_type": "TOOL_CALL",
+      "details": {
+        "tool": "extract_log_clusters",
+        "args": {
+          "case_id": "case_08"
+        }
+      }
+    },
+    {
+      "timestamp": 6.196,
+      "step_type": "TOOL_RESPONSE",
+      "details": {
+        "result": {
+          "is_spam": false,
+          "status_code": 200,
+          "headers": [],
+          "body_fields": {
+            "data": {
+              "dim": "US",
+              "dimension_id": 99
+            }
+          },
+          "observed_union_fields": [
+            "data"
+          ],
+          "observed_common_fields": [
+            "data"
+          ],
+          "variable_fields": [],
+          "polymorphic_candidate": false
+        }
+      }
+    },
+    {
+      "timestamp": 8.66,
+      "step_type": "FINAL_VERDICT",
+      "details": {
+        "drift_detected": true,
+        "drift_type": "NESTED_SHADOW_FIELD",
+        "field": "data.dimension_id"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+paths:
+  /v1/analytics:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    properties:
+                      dim:
+                        type: string

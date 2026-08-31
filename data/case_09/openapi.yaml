@@ -1,0 +1,12 @@
+paths:
+  /v1/webhooks:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                event:
+                  type: string
+      responses:
+        '200': {}

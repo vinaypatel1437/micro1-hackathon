@@ -1,0 +1,78 @@
+{
+  "case_id": "case_02",
+  "runtime_seconds": 6.92,
+  "total_steps": 4,
+  "steps": [
+    {
+      "timestamp": 3.639,
+      "step_type": "INITIALIZE",
+      "details": {
+        "case_id": "case_02",
+        "spec": {
+          "paths": {
+            "/v1/users/{id}": {
+              "get": {
+                "responses": {
+                  "200": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "properties": {
+                            "zip_code": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "timestamp": 3.639,
+      "step_type": "TOOL_CALL",
+      "details": {
+        "tool": "extract_log_clusters",
+        "args": {
+          "case_id": "case_02"
+        }
+      }
+    },
+    {
+      "timestamp": 3.64,
+      "step_type": "TOOL_RESPONSE",
+      "details": {
+        "result": {
+          "is_spam": false,
+          "status_code": 200,
+          "headers": [],
+          "body_fields": {
+            "zip_code": "EC1A 1BB"
+          },
+          "observed_union_fields": [
+            "zip_code"
+          ],
+          "observed_common_fields": [
+            "zip_code"
+          ],
+          "variable_fields": [],
+          "polymorphic_candidate": false
+        }
+      }
+    },
+    {
+      "timestamp": 6.918,
+      "step_type": "FINAL_VERDICT",
+      "details": {
+        "drift_detected": true,
+        "drift_type": "TYPE_WIDENING",
+        "field": "zip_code"
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "case_id": "case_01",
+  "runtime_seconds": 5.45,
+  "total_steps": 4,
+  "steps": [
+    {
+      "timestamp": 2.635,
+      "step_type": "INITIALIZE",
+      "details": {
+        "case_id": "case_01",
+        "spec": {
+          "paths": {
+            "/v1/payments": {
+              "post": {
+                "requestBody": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "properties": {
+                          "amount": {
+                            "type": "number"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "timestamp": 2.635,
+      "step_type": "TOOL_CALL",
+      "details": {
+        "tool": "extract_log_clusters",
+        "args": {
+          "case_id": "case_01"
+        }
+      }
+    },
+    {
+      "timestamp": 2.635,
+      "step_type": "TOOL_RESPONSE",
+      "details": {
+        "result": {
+          "is_spam": false,
+          "status_code": 200,
+          "headers": [
+            "idempotency-key"
+          ],
+          "body_fields": {
+            "amount": 100
+          },
+          "observed_union_fields": [
+            "amount"
+          ],
+          "observed_common_fields": [
+            "amount"
+          ],
+          "variable_fields": [],
+          "polymorphic_candidate": false
+        }
+      }
+    },
+    {
+      "timestamp": 5.439,
+      "step_type": "FINAL_VERDICT",
+      "details": {
+        "drift_detected": true,
+        "drift_type": "SHADOW_HEADER",
+        "field": "idempotency-key"
+      }
+    }
+  ]
+}

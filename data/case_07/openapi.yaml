@@ -1,0 +1,11 @@
+paths:
+  /v1/auth:
+    post:
+      responses:
+        '401':
+          content:
+            application/json:
+              schema:
+                properties:
+                  error:
+                    type: string

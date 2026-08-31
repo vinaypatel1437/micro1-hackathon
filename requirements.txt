@@ -1,0 +1,10 @@
+python-dotenv
+google-genai
+tabulate
+arize-phoenix-evals
+phoenix
+pydantic
+sqlalchemy
+openinference
+tenacity
+requests

@@ -1,0 +1,6 @@
+{
+  "name": "POST /v1/payments (Shadow Header)",
+  "drift": true,
+  "type": "SHADOW_HEADER",
+  "field": "idempotency-key"
+}

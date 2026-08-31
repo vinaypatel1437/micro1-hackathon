@@ -1,0 +1,6 @@
+{
+  "name": "PUT /v1/subs (Nullability Drift)",
+  "drift": true,
+  "type": "NULLABILITY_DRIFT",
+  "field": "active"
+}

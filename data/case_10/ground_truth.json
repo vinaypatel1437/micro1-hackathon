@@ -1,0 +1,6 @@
+{
+  "name": "PATCH /v1/org (Adversarial Polymorphism)",
+  "drift": true,
+  "type": "POLYMORPHIC_SHADOW_FIELD",
+  "field": "vat_number"
+}

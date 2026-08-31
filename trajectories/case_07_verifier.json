@@ -1,0 +1,10 @@
+{
+  "case_id": "case_07",
+  "total_requests": 15,
+  "permissive_valid": 15,
+  "strict_valid": 0,
+  "permissive_pct": 100.0,
+  "strict_pct": 0.0,
+  "verdict": "BACKEND_PERMISSIVE",
+  "message": "Observed traffic contains fields not in spec and permissive validation passes while strict fails. Backend likely accepts shadow fields."
+}

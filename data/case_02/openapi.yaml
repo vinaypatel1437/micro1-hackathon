@@ -1,0 +1,11 @@
+paths:
+  /v1/users/{id}:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  zip_code:
+                    type: integer

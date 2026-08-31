@@ -1,0 +1,88 @@
+{
+  "case_id": "case_10",
+  "runtime_seconds": 7.91,
+  "total_steps": 4,
+  "steps": [
+    {
+      "timestamp": 5.498,
+      "step_type": "INITIALIZE",
+      "details": {
+        "case_id": "case_10",
+        "spec": {
+          "paths": {
+            "/v1/org": {
+              "patch": {
+                "responses": {
+                  "200": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "properties": {
+                            "tax_id": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "timestamp": 5.498,
+      "step_type": "TOOL_CALL",
+      "details": {
+        "tool": "extract_log_clusters",
+        "args": {
+          "case_id": "case_10"
+        }
+      }
+    },
+    {
+      "timestamp": 5.498,
+      "step_type": "TOOL_RESPONSE",
+      "details": {
+        "result": {
+          "is_spam": false,
+          "status_code": 200,
+          "headers": [],
+          "body_fields": {
+            "tax_id": "99-123",
+            "org_type": "ENTERPRISE",
+            "vat_number": "GB999"
+          },
+          "observed_union_fields": [
+            "org_type",
+            "tax_id",
+            "vat_number"
+          ],
+          "observed_common_fields": [
+            "org_type",
+            "tax_id",
+            "vat_number"
+          ],
+          "variable_fields": [],
+          "polymorphic_candidate": true,
+          "extra_fields": [
+            "org_type",
+            "vat_number"
+          ]
+        }
+      }
+    },
+    {
+      "timestamp": 7.91,
+      "step_type": "FINAL_VERDICT",
+      "details": {
+        "drift_detected": true,
+        "drift_type": "POLYMORPHIC_SHADOW_FIELD",
+        "field": "org_type, vat_number"
+      }
+    }
+  ]
+}

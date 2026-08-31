@@ -1,0 +1,6 @@
+paths:
+  /v1/items/{id}:
+    delete:
+      responses:
+        '200':
+          description: OK

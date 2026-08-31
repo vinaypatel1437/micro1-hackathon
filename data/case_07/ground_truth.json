@@ -1,0 +1,6 @@
+{
+  "name": "POST /v1/auth (Error Schema Drift)",
+  "drift": true,
+  "type": "ERROR_SCHEMA_DRIFT",
+  "field": "errors"
+}

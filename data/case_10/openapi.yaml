@@ -1,0 +1,11 @@
+paths:
+  /v1/org:
+    patch:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  tax_id:
+                    type: string

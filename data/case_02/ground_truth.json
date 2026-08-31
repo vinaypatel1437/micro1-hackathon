@@ -1,0 +1,6 @@
+{
+  "name": "GET /v1/users/{id} (Type Widening)",
+  "drift": true,
+  "type": "TYPE_WIDENING",
+  "field": "zip_code"
+}

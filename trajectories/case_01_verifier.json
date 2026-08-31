@@ -1,0 +1,10 @@
+{
+  "case_id": "case_01",
+  "total_requests": 15,
+  "permissive_valid": 15,
+  "strict_valid": 15,
+  "permissive_pct": 100.0,
+  "strict_pct": 100.0,
+  "verdict": "BACKEND_STRICT_OR_INCONCLUSIVE",
+  "message": "Observed traffic mostly conforms to spec under permissive/strict checks, or insufficient evidence of shadow acceptance."
+}

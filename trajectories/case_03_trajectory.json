@@ -1,0 +1,81 @@
+{
+  "case_id": "case_03",
+  "runtime_seconds": 8.65,
+  "total_steps": 4,
+  "steps": [
+    {
+      "timestamp": 6.349,
+      "step_type": "INITIALIZE",
+      "details": {
+        "case_id": "case_03",
+        "spec": {
+          "paths": {
+            "/v1/subs": {
+              "put": {
+                "responses": {
+                  "200": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "properties": {
+                            "active": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "active"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "timestamp": 6.349,
+      "step_type": "TOOL_CALL",
+      "details": {
+        "tool": "extract_log_clusters",
+        "args": {
+          "case_id": "case_03"
+        }
+      }
+    },
+    {
+      "timestamp": 6.349,
+      "step_type": "TOOL_RESPONSE",
+      "details": {
+        "result": {
+          "is_spam": false,
+          "status_code": 200,
+          "headers": [],
+          "body_fields": {
+            "active": null
+          },
+          "observed_union_fields": [
+            "active"
+          ],
+          "observed_common_fields": [
+            "active"
+          ],
+          "variable_fields": [],
+          "polymorphic_candidate": false
+        }
+      }
+    },
+    {
+      "timestamp": 8.651,
+      "step_type": "FINAL_VERDICT",
+      "details": {
+        "drift_detected": true,
+        "drift_type": "NULLABILITY_DRIFT",
+        "field": "active"
+      }
+    }
+  ]
+}

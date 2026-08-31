@@ -1,0 +1,78 @@
+{
+  "case_id": "case_06",
+  "runtime_seconds": 5.53,
+  "total_steps": 4,
+  "steps": [
+    {
+      "timestamp": 2.85,
+      "step_type": "INITIALIZE",
+      "details": {
+        "case_id": "case_06",
+        "spec": {
+          "paths": {
+            "/v1/inventory": {
+              "get": {
+                "responses": {
+                  "200": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "properties": {
+                            "count": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "timestamp": 2.85,
+      "step_type": "TOOL_CALL",
+      "details": {
+        "tool": "extract_log_clusters",
+        "args": {
+          "case_id": "case_06"
+        }
+      }
+    },
+    {
+      "timestamp": 2.85,
+      "step_type": "TOOL_RESPONSE",
+      "details": {
+        "result": {
+          "is_spam": false,
+          "status_code": 200,
+          "headers": [],
+          "body_fields": {
+            "count": 42
+          },
+          "observed_union_fields": [
+            "count"
+          ],
+          "observed_common_fields": [
+            "count"
+          ],
+          "variable_fields": [],
+          "polymorphic_candidate": false
+        }
+      }
+    },
+    {
+      "timestamp": 5.534,
+      "step_type": "FINAL_VERDICT",
+      "details": {
+        "drift_detected": false,
+        "drift_type": "NONE",
+        "field": "none"
+      }
+    }
+  ]
+}

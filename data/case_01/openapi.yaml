@@ -1,0 +1,11 @@
+paths:
+  /v1/payments:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                amount:
+                  type: number
+              type: object

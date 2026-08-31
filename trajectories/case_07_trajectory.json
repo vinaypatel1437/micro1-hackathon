@@ -1,0 +1,82 @@
+{
+  "case_id": "case_07",
+  "runtime_seconds": 7.03,
+  "total_steps": 4,
+  "steps": [
+    {
+      "timestamp": 3.125,
+      "step_type": "INITIALIZE",
+      "details": {
+        "case_id": "case_07",
+        "spec": {
+          "paths": {
+            "/v1/auth": {
+              "post": {
+                "responses": {
+                  "401": {
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "properties": {
+                            "error": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "timestamp": 3.125,
+      "step_type": "TOOL_CALL",
+      "details": {
+        "tool": "extract_log_clusters",
+        "args": {
+          "case_id": "case_07"
+        }
+      }
+    },
+    {
+      "timestamp": 3.126,
+      "step_type": "TOOL_RESPONSE",
+      "details": {
+        "result": {
+          "is_spam": false,
+          "status_code": 401,
+          "headers": [],
+          "body_fields": {
+            "errors": [
+              {
+                "code": "BAD_PASS"
+              }
+            ]
+          },
+          "observed_union_fields": [
+            "errors"
+          ],
+          "observed_common_fields": [
+            "errors"
+          ],
+          "variable_fields": [],
+          "polymorphic_candidate": false
+        }
+      }
+    },
+    {
+      "timestamp": 7.034,
+      "step_type": "FINAL_VERDICT",
+      "details": {
+        "drift_detected": true,
+        "drift_type": "ERROR_SCHEMA_DRIFT",
+        "field": "errors"
+      }
+    }
+  ]
+}

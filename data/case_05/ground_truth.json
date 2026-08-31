@@ -1,0 +1,6 @@
+{
+  "name": "DELETE /v1/items (Status Code Drift)",
+  "drift": true,
+  "type": "STATUS_CODE_DRIFT",
+  "field": "204"
+}

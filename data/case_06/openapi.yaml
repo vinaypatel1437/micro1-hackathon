@@ -1,0 +1,11 @@
+paths:
+  /v1/inventory:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  count:
+                    type: integer

@@ -1,0 +1,6 @@
+{
+  "name": "POST /v1/orders (Enum Drift)",
+  "drift": true,
+  "type": "ENUM_DRIFT",
+  "field": "status"
+}

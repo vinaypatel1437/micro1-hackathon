@@ -1,0 +1,15 @@
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
+{"status": 200, "headers": {"idempotency-key": "uuid-123"}, "body": {"amount": 100}}
