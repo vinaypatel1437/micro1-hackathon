@@ -1,10 +1,10 @@
 {
   "case_id": "case_05",
-  "runtime_seconds": 5.62,
+  "runtime_seconds": 7.04,
   "total_steps": 4,
   "steps": [
     {
-      "timestamp": 2.996,
+      "timestamp": 3.72,
       "step_type": "INITIALIZE",
       "details": {
         "case_id": "case_05",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "timestamp": 2.996,
+      "timestamp": 3.72,
       "step_type": "TOOL_CALL",
       "details": {
         "tool": "extract_log_clusters",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "timestamp": 2.996,
+      "timestamp": 3.721,
       "step_type": "TOOL_RESPONSE",
       "details": {
         "result": {
@@ -50,7 +50,7 @@
       }
     },
     {
-      "timestamp": 5.617,
+      "timestamp": 7.039,
       "step_type": "FINAL_VERDICT",
       "details": {
         "drift_detected": true,

@@ -1,11 +1,11 @@
 # Trajectory Log: `case_05`
 
-- **Runtime:** 5.62s
+- **Runtime:** 7.04s
 - **Total Iterations:** 4
 
 ---
 
-### Step 1: `INITIALIZE` (+2.996s)
+### Step 1: `INITIALIZE` (+3.72s)
 ```json
 {
   "case_id": "case_05",
@@ -25,7 +25,7 @@
 }
 ```
 
-### Step 2: `TOOL_CALL` (+2.996s)
+### Step 2: `TOOL_CALL` (+3.72s)
 ```json
 {
   "tool": "extract_log_clusters",
@@ -35,7 +35,7 @@
 }
 ```
 
-### Step 3: `TOOL_RESPONSE` (+2.996s)
+### Step 3: `TOOL_RESPONSE` (+3.721s)
 ```json
 {
   "result": {
@@ -51,7 +51,7 @@
 }
 ```
 
-### Step 4: `FINAL_VERDICT` (+5.617s)
+### Step 4: `FINAL_VERDICT` (+7.039s)
 ```json
 {
   "drift_detected": true,
