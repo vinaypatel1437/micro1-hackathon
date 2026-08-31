@@ -72,11 +72,16 @@ python verifier_agent.py --all
 
 If you want to improve the project, open an issue or submit a PR. Keep changes focused on reproducibility and minimal external services.
 
-## License & Contact
+## License
 
-This repo is prepared for the micro1 hackathon submission. For questions or reproducibility artifacts (pinned requirements, Dockerfile, recorded transcripts), contact the maintainer at patel.vp.vinay@gmail.com.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
-Repository layout
+## Contact
+
+For questions or reproducibility artifacts (pinned requirements, Dockerfile, recorded transcripts), contact the maintainer at patel.vp.vinay@gmail.com.
+
+## Repository layout
+
 - `agent_workflow.py`: Agent flow that runs deterministic tools, composes LLM prompts, and records agent trajectories via `tracer.py`.
 - `baseline.py`: Baseline LLM flow (records baseline trajectories).
 - `evaluate.py`: Runs the benchmark across `data/*` cases and prints a comparison table.
@@ -86,7 +91,8 @@ Repository layout
 - `trajectories/`: Generated `.md` and `.json` traces for agent and baseline runs.
 - `IMPROVEMENT_CHANGELOG.md`, `TOOLS_USED.md`: Submission documentation and tool disclosure.
 
-Quick start (reproducible)
+## Quick start (reproducible)
+
 1. Create and activate Python 3.11 virtual environment:
 
 ```powershell
@@ -113,22 +119,26 @@ python run_eval.py
 ```
 
 Outputs
+
 - Console: per-case comparison table and summary accuracies.
 - `trajectories/`: `.md` and `.json` artifacts for each case and for both baseline and agent runs (required for submission).
 
-Phoenix UI (optional)
+## Phoenix UI (optional)
+
 - To enable the local Phoenix UI for interactive inspection set `PHOENIX_UI=1` then run the evaluation. On Windows, Phoenix may leave a locked temp DB; if you see a PermissionError, unset `PHOENIX_UI` or restart the Python process.
 
-Submission checklist (micro1)
+## Submission checklist (micro1)
+
 - Baseline + Agent: Present (`baseline.py`, `agent_workflow.py`).
 - 10-case benchmark: Present (`data/` folder). Use `generate_dataset.py` to recreate if needed.
 - Agent trajectories: Present under `trajectories/` — both baseline and agent traces are included.
 - Reproduction guide: `REPRODUCTION.md` (this repo).
 - Improvement changelog and tools disclosure: `IMPROVEMENT_CHANGELOG.md`, `TOOLS_USED.md`.
 
-Notes & limitations
+## Notes & limitations
+
 - The repository includes a deterministic `extract_log_clusters` clusterer and a heuristic for polymorphic shadow fields used to nudge model outputs. A lightweight sandboxed HTTP simulator/verifier is not included in this submission; adding a `verifier_agent` that replays requests in a local sandbox is recommended for full verification pipelines.
 
-License
-- (Add your preferred license file to the repo before submission)
-# Micro1 Hackathon
+## License
+
+- MIT License (see `LICENSE`)
