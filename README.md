@@ -2,7 +2,7 @@
 
 > Autonomous reconciler for shadow API drift and silent contract corruption.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/) [![Model: Gemini 1.5 Flash](https://img.shields.io/badge/model-Gemini%201.5%20Flash-lightgrey.svg)](https://aistudio.google.com/) [![Benchmark: 100% Pass Rate](https://img.shields.io/badge/benchmark-100%25-green.svg)](https://github.com/vinaypatel1437/micro1-hackathon) [![Repository: GitHub](https://img.shields.io/badge/repo-GitHub-black.svg)](https://github.com/vinaypatel1437/micro1-hackathon)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/) [![Model: Gemini 1.5 Flash](https://img.shields.io/badge/model-Gemini%201.5%20Flash-lightgrey.svg)](https://aistudio.google.com/) [![Benchmark: 100% Pass Rate](https://img.shields.io/badge/benchmark-100%25-green.svg)](https://github.com/vinaypatel1437/darkcontract-sentinel) [![Repository: GitHub](https://img.shields.io/badge/repo-GitHub-black.svg)](https://github.com/vinaypatel1437/darkcontract-sentinel)
 
 ---
 
@@ -121,8 +121,8 @@ Prereqs: Python 3.10+, a Gemini API key (optional for offline deterministic runs
 Commands (copy/paste):
 
 ```bash
-git clone https://github.com/vinaypatel1437/micro1-hackathon.git
-cd micro1-hackathon
+git clone https://github.com/vinaypatel1437/darkcontract-sentinel.git
+cd darkcontract-sentinel
 python -m venv venv
 # On Windows (PowerShell)
 .\venv\Scripts\Activate.ps1
@@ -160,7 +160,7 @@ Sample snippet (from `case_01_trajectory.md`):
 ## 9. Repository File Tree (overview)
 
 ```
-micro1-hackathon/
+darkcontract-sentinel/
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
@@ -308,7 +308,7 @@ Every step of the agent's execution is automatically logged into `/trajectories/
 
 ## 9\. Repository File Tree
 
-micro1-hackathon/
+darkcontract-sentinel/
 
 ├── README.md                \# Complete all-in-one project documentation
 
